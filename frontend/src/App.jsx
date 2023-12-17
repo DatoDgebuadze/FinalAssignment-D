@@ -6,6 +6,7 @@ import NotFound from "./NotFound"
 import NotAuthorized from "./NotAuthorized";
 
 function App() {
+
   return (
     <>
       <BrowserRouter>
