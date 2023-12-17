@@ -1,8 +1,8 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import GroceriesApp from "./GroceriesApp";
 import LoginForm from "./LoginForm";
-import NotFound from "./NotFound";
+import NotFound from "./NotFound"
 import NotAuthorized from "./NotAuthorized";
 
 function App() {
@@ -12,10 +12,13 @@ function App() {
         <Routes>
           <Route path="/" element={<LoginForm />} />
           <Route path="/main" element={<GroceriesApp />} />
-          <Route path="/not-authorized" element={<NotAuthorized />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/not-authorized" element={<NotAuthorized />} />
         </Routes>
       </BrowserRouter>
+
+
+
     </>
   );
 }
