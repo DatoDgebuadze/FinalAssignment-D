@@ -4,6 +4,7 @@ import GroceriesApp from "./GroceriesApp";
 import LoginForm from "./LoginForm";
 import NotFound from "./NotFound"
 import NotAuthorized from "./NotAuthorized";
+import PrivateRoutes from "./utilities/PrivateRouter";
 
 function App() {
 
@@ -11,8 +12,10 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          <Route element={<PrivateRoutes />}>
+            <Route path="/main" element={<GroceriesApp />} />
+          </Route>
           <Route path="/" element={<LoginForm />} />
-          <Route path="/main" element={<GroceriesApp />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/not-authorized" element={<NotAuthorized />} />
         </Routes>
